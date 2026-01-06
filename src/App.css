@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden !important;
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden !important;
+  width: 100vw;
+  height: 100vh;
+}
+
+.scroll-container {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden !important;
+  width: 100vw;
+  height: 100vh;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus,
+button:focus-visible {
+  outline: none !important;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #print-employees,
+  #print-employees * {
+    visibility: visible;
+  }
+
+  #print-employees {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  @page {
+    size: landscape;
+    margin: 16mm;
+  }
+}
