@@ -46,9 +46,14 @@ const EmployeeTable: React.FC<Props> = ({
                 </thead>
 
                 <tbody className="divide-y">
-                    {employees.length === 0 ? <td colSpan={8} className="text-center py-3">
-                        Employees data not available
-                    </td> : employees.map((emp) => (
+                    {employees.length === 0 ? <tr>
+                        <td
+                            colSpan={8}
+                            className="text-center py-6 text-gray-500"
+                        >
+                            No employees found
+                        </td>
+                    </tr> : employees.map((emp) => (
                         <EmployeeRow
                             key={emp.id}
                             emp={emp}
